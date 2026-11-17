@@ -1,28 +1,46 @@
-# Decimal to Binary Converter
+<p align="center">
+  <img src="https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_large.svg" alt="freeCodeCamp logo" width="360">
+</p>
 
-![freeCodeCamp logo](https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_large.svg)
+<h1 align="center">Decimal to Binary Converter</h1>
 
-A small web application that converts decimal numbers into binary numbers. It was created as part of the freeCodeCamp JavaScript Algorithms and Data Structures curriculum while learning recursion.
+<p align="center">
+  A small interactive project that turns decimal numbers into binary—and makes recursion visible.
+</p>
 
-> **Learning note:** This was not my favorite project in the curriculum. However, I decided it was worth including because understanding binary numbers is an important foundation for developers. Binary is used throughout computing, including data representation, bitwise operations, memory, networking, and computer architecture.
+<p align="center">
+  <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-recursion-by-building-a-decimal-to-binary-converter/">
+    <img src="https://img.shields.io/badge/freeCodeCamp-Learning%20Project-0a0a23?logo=freecodecamp" alt="freeCodeCamp learning project">
+  </a>
+  <img src="https://img.shields.io/badge/HTML-CSS-JavaScript-1b1b32" alt="Built with HTML, CSS, and JavaScript">
+</p>
 
-## What It Does
+## About
 
-- Accepts a non-negative decimal number.
-- Converts the number to binary using a recursive `decimalToBinary()` function.
-- Supports conversion with the **Convert** button or the **Enter** key.
-- Displays an educational call-stack animation when converting the number `5`.
-- Rejects empty, invalid, and negative input values.
+This browser-based converter was built while learning recursion through freeCodeCamp. Enter a non-negative whole number to see its binary representation. Convert **5** to watch the app animate how recursive calls move through the call stack.
 
-## Technologies
+## Features
 
-- HTML5
-- CSS3
-- JavaScript
+- Converts non-negative decimal integers to binary.
+- Accepts input through the **Convert** button or **Enter** key.
+- Animates the recursive call stack for the value `5`.
+- Shows a helpful message when the input is empty or negative.
+- Runs directly in a browser with no dependencies or build step.
 
-## How Recursion Is Used
+## Recursion, step by step
 
-The converter repeatedly divides the input by `2` until it reaches the base case of `0` or `1`. As each recursive call returns, the remainder from each division is added to the result:
+The function keeps dividing the number by two until it reaches `0` or `1`. As the calls return, it adds each remainder to the result:
+
+```text
+decimalToBinary(5)
+  -> decimalToBinary(2)
+    -> decimalToBinary(1)  // base case
+    <- "1"
+  <- "10"
+<- "101"
+```
+
+That process is implemented in JavaScript:
 
 ```js
 const decimalToBinary = (input) => {
@@ -34,43 +52,26 @@ const decimalToBinary = (input) => {
 };
 ```
 
-The special animation for `5` makes the recursive call stack visible:
-
-```text
-decimalToBinary(5)
-  -> decimalToBinary(2)
-    -> decimalToBinary(1)
-```
-
-## Running the Project
+## Run it locally
 
 1. Clone or download this repository.
-2. Open `index.html` in a web browser.
-3. Enter a non-negative decimal number.
-4. Select **Convert** or press **Enter**.
+2. Open `index.html` in a browser.
+3. Enter a non-negative whole number and select **Convert** or press **Enter**.
 
-No build tools or dependencies are required.
+## Built with
 
-## Project Files
+HTML, CSS, and vanilla JavaScript.
+
+## Project files
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Defines the converter interface and output areas |
-| `styles.css` | Provides the layout, colors, responsive design, and animation styling |
-| `script.js` | Handles validation, conversion, recursion, and the call-stack animation |
+| `index.html` | Converter form and output areas |
+| `styles.css` | Dark theme, responsive layout, and call-stack animation styles |
+| `script.js` | Input handling, recursive conversion, and animation |
 
-## Learning Takeaways
+## Learning project credit
 
-This project reinforced:
+Created as part of freeCodeCamp's [Learn Recursion by Building a Decimal to Binary Converter](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-recursion-by-building-a-decimal-to-binary-converter/) curriculum.
 
-- How recursive functions use a base case to stop execution.
-- How the call stack stores and resolves nested function calls.
-- How decimal values can be converted into binary using division and remainders.
-- How JavaScript can update a page dynamically through the DOM.
-- How input validation protects the user experience.
-
-## Attribution
-
-This project was completed as part of the [freeCodeCamp JavaScript Algorithms and Data Structures curriculum](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-recursion-by-building-a-decimal-to-binary-converter/).
-
-The curriculum and project concept belong to [freeCodeCamp](https://www.freecodecamp.org/). This repository documents my completed learning exercise and implementation.
+The curriculum and freeCodeCamp logo belong to [freeCodeCamp](https://www.freecodecamp.org/). This repository is my implementation of the learning project.
