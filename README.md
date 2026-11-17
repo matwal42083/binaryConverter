@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_large.svg" alt="freeCodeCamp logo" width="360">
+  <img src="https://raw.githubusercontent.com/freeCodeCamp/assets/master/assets/logos/Free%20Code%20Camp%20logo.svg" alt="freeCodeCamp logo" width="360">
 </p>
 
 <h1 align="center">Decimal to Binary Converter</h1>
